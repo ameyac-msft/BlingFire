@@ -35,6 +35,7 @@ _define NUMBER (ChuNX)
  # all letters which can be capital (e.g. the first letter of a sentence)
 _define CAPITAL (ChuOnlyCapital|ChuCaseAgnostic)
 
+_define NEWLINE [\x000D\x000A]
 
  # multi-word abbreviation
 
@@ -161,6 +162,7 @@ _end
  #
  # Breaking rules
  #
+< NEWLINE+ > --> EOS
 
 < AlwaysEndPunctuation > --> EOS
 
